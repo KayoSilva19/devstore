@@ -10,6 +10,15 @@ const config: Config = {
     fontFamily: {
       sans: 'var(--font-inter)',
     },
+    width: {
+      Wform: '320px',
+    },
+    maxWidth: {
+      largeDesktop: '1600px',
+    },
+    gridTemplateRows: {
+      app: 'min-content max-content',
+    },
   },
   plugins: [],
 }
