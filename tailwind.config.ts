@@ -14,6 +14,9 @@ const config: Config = {
       width: {
         Wform: '320px',
       },
+      height: {
+        skeleton: '860px',
+      },
       maxWidth: {
         largeDesktop: '1600px',
         largeProductValue: '280px',
