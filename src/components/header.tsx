@@ -11,7 +11,7 @@ export function Header() {
         </Link>
 
         <form className="flex w-Wform items-center gap-3 rounded-full bg-zinc-900 px-5 py-3 ring-zinc-700">
-          <Search className="w-5 h-5 text-zinc-500" />
+          <Search className="h-5 w-5 text-zinc-500" />
           <input
             type="text"
             placeholder="Buscar produtos"
@@ -22,7 +22,7 @@ export function Header() {
 
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2">
-          <ShoppingBag className="w-4 h-4" />
+          <ShoppingBag className="h-4 w-4" />
           <span className="text-sm">Cart (0)</span>
         </div>
 
@@ -31,7 +31,7 @@ export function Header() {
           <span className="text-sm">Account</span>
           <Image
             src="https://github.com/kayosilva19.png"
-            className="w-6 h-6 rounded-full"
+            className="h-6 w-6 rounded-full"
             width={24}
             height={24}
             alt=""

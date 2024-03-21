@@ -18,9 +18,9 @@ export default async function Home() {
   const [highlightedProduct, ...otherProducts] = await getFeaturedProducts()
 
   return (
-    <div className="max-h-HomeProduct grid-rows-6 grid grid-cols-9 gap-6">
+    <div className="grid max-h-HomeProduct grid-cols-9 grid-rows-6 gap-6">
       <Link
-        href={`/products/${highlightedProduct.slug}`}
+        href={`/product/${highlightedProduct.slug}`}
         className="group relative col-span-6 row-span-6 flex items-end justify-center overflow-hidden rounded-lg bg-zinc-900"
       >
         <Image
@@ -32,7 +32,7 @@ export default async function Home() {
           alt=""
         />
 
-        <div className="max-w-largeProductValue absolute bottom-28 right-28 flex h-12 items-center gap-2 rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
+        <div className="absolute bottom-28 right-28 flex h-12 max-w-largeProductValue items-center gap-2 rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
           <span className="truncate text-sm">{highlightedProduct.title}</span>
           <span className="flex h-full items-center justify-center rounded-full bg-violet-500 px-4 font-semibold">
             {FormatCurrency(highlightedProduct.price)}
@@ -43,7 +43,7 @@ export default async function Home() {
       {otherProducts.map((product) => {
         return (
           <Link
-            href={`/products/${product.slug}`}
+            href={`/product/${product.slug}`}
             className="group relative col-span-3 row-span-3 flex items-end justify-center overflow-hidden rounded-lg bg-zinc-900"
             key={product.id}
           >
@@ -56,7 +56,7 @@ export default async function Home() {
               alt=""
             />
 
-            <div className="max-w-largeProductValue absolute bottom-10 right-10 flex h-12 items-center gap-2 rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
+            <div className="absolute bottom-10 right-10 flex h-12 max-w-largeProductValue items-center gap-2 rounded-full border-2 border-zinc-500 bg-black/60 p-1 pl-5">
               <span className="truncate text-sm">{product.title}</span>
               <span className="flex h-full items-center justify-center rounded-full bg-violet-500 px-4 font-semibold">
                 {FormatCurrency(product.price)}
