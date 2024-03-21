@@ -7,17 +7,23 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    fontFamily: {
-      sans: 'var(--font-inter)',
-    },
-    width: {
-      Wform: '320px',
-    },
-    maxWidth: {
-      largeDesktop: '1600px',
-    },
-    gridTemplateRows: {
-      app: 'min-content max-content',
+    extend: {
+      fontFamily: {
+        sans: 'var(--font-inter)',
+      },
+      width: {
+        Wform: '320px',
+      },
+      maxWidth: {
+        largeDesktop: '1600px',
+        largeProductValue: '280px',
+      },
+      maxHeight: {
+        HomeProduct: '860px',
+      },
+      gridTemplateRows: {
+        app: 'min-content max-content',
+      },
     },
   },
   plugins: [],
