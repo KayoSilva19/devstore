@@ -26,12 +26,21 @@ export async function generateMetadata({
   }
 }
 
+export async function generateStaticParams() {
+  const response = await api(`/products/featured`)
+  const products: Product[] = await response.json()
+
+  return products.map((product) => {
+    return { slug: product.slug }
+  })
+}
+
 export default async function ProductPage({ params }: ProductProps) {
   const product = await getSlugProduct(params.slug)
 
   return (
     <div className="relative grid max-h-HomeProduct grid-cols-3">
-      <div className="col-span-2 overflow-hidden">
+      <div className="col-span-full overflow-hidden md:col-span-2">
         <Image
           src={product.image}
           alt=""
@@ -41,18 +50,20 @@ export default async function ProductPage({ params }: ProductProps) {
         />
       </div>
 
-      <div className="flex flex-col justify-center px-12">
-        <h1 className="text-3xl font-bold leading-tight">{product.title}</h1>
+      <div className="col-span-full flex w-full flex-col justify-center pt-8 md:col-span-1 md:pt-0 xl:px-12">
+        <h1 className="text-xl font-bold leading-tight md:text-2xl lg:text-3xl">
+          {product.title}
+        </h1>
 
-        <p className="mt-2 leading-relaxed text-zinc-400">
+        <p className="md:text-md mt-2 leading-relaxed text-zinc-400">
           {product.description}
         </p>
 
-        <div className="mt-8 flex items-center gap-3">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
           <span className="inline-block rounded-full bg-violet-500 px-5 py-2.5 font-semibold">
             {FormatCurrency(product.price)}
           </span>
-          <span className="text-sm text-zinc-400">
+          <span className="w-full text-sm text-zinc-400 sm:flex">
             Em até 12x s/ juros de {FormatCurrency(product.price / 12, true)}
           </span>
         </div>
