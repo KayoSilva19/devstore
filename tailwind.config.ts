@@ -15,14 +15,19 @@ const config: Config = {
         Wform: '320px',
       },
       height: {
-        skeleton: '860px',
+        minSkeleton: '354px',
+        midSkeleton: '386px',
+        largeSkeleton: '530px',
+        XlargeSkeleton: '860px',
       },
       maxWidth: {
         largeDesktop: '1600px',
         largeProductValue: '280px',
+        minMaxPoductValue: '200px',
       },
       maxHeight: {
         HomeProduct: '860px',
+        MidHomeProduct: '600px',
       },
       gridTemplateRows: {
         app: 'min-content max-content',
