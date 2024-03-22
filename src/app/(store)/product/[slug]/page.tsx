@@ -101,7 +101,7 @@ export default async function ProductPage({ params }: ProductProps) {
 
         <button
           type="button"
-          className="mt-8 flex h-12 items-center justify-center rounded-full bg-emerald-600 font-semibold text-white "
+          className="mt-8 flex h-12 items-center justify-center rounded-full bg-emerald-600 font-semibold text-white transition-colors duration-75 hover:bg-emerald-700"
         >
           Adicionar ao carrinho
         </button>
