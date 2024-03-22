@@ -13,7 +13,7 @@ export function Header() {
           devstore
         </Link>
 
-        <form className="flex max-w-full items-center gap-3 rounded-full bg-zinc-900 px-5 py-3 ring-zinc-700 sm:w-Wform">
+        <form className="w-WformMin flex items-center gap-3 rounded-full bg-zinc-900 px-5 py-3 ring-zinc-700 sm:w-Wform">
           <Search className="h-5 w-5 text-zinc-500" />
           <input
             type="text"

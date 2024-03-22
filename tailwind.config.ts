@@ -13,6 +13,7 @@ const config: Config = {
       },
       width: {
         Wform: '320px',
+        WformMin: '200px',
       },
       height: {
         minSkeleton: '354px',
