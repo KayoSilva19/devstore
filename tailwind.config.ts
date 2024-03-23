@@ -18,6 +18,7 @@ const config: Config = {
       height: {
         minSkeleton: '354px',
         midSkeleton: '386px',
+        largeOneSkeleton: '400px',
         largeSkeleton: '530px',
         XlargeSkeleton: '860px',
       },
