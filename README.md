@@ -1,4 +1,4 @@
- Status: Completo 🚀
+Status: Completo 🚀
 
 ## DevStore
 O DevStore é e-commerce desenvolvido utilizando Next.js e Tailwind CSS, que oferece páginas para a home, detalhes do produto e busca de produtos.
